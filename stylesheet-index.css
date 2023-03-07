@@ -1,0 +1,15 @@
+﻿head {
+    opacity: 2;
+    background: url("file:///C:/Users/Benedikt/SynologyDrive/Dokumente/0009_Technikerschule/INT-Projekt/Git-Repository/bilder/background-code.jpg");
+    background-size: cover;
+    position: absolute;
+}
+
+#nav {
+    border: 10px dotted darkred;
+    margin-inline: auto;
+}
+
+footer {
+    align-self: flex-end;
+}
