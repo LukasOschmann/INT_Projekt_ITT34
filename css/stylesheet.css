@@ -11,7 +11,8 @@
 
 .footer {
     align-self: flex-end;
-    background-color: #FFD700
+    background-color: #FFD700;
+    color: #6B6B6B;
 }
 
 .nav-bar-item {
@@ -36,3 +37,23 @@
     justify-content: space-around;
 }
 
+/* CSS-fragen styles*/
+.css-frage{
+
+}
+
+.css-question{
+
+}
+
+#css.answerbutton{
+
+}
+
+.css-quizform{
+
+}
+
+.css-radiocontainer{
+
+}
