@@ -1,13 +1,7 @@
 ﻿body {
-    background-color: black;
+    background-color: #6B6B6B;
     color: white;
     
-}
-
-.background {
-    background: url("C:\Users\Benedikt\SynologyDrive\Dokumente\0009_Technikerschule\INT-Projekt\Git-repository\bilder\background-code.jpg");
-    background-size: cover;
-    position: absolute;
 }
 
 #nav {
@@ -15,8 +9,9 @@
     margin-inline: auto;
 }
 
-footer {
+.footer {
     align-self: flex-end;
+    background-color: #FFD700
 }
 
 .nav-bar-item {
@@ -35,9 +30,9 @@ footer {
     z-index: 99;
     font-size: 17px;
     top: 0;
-    background-color: #282A35;
+    background-color: #6B6B6B;
     color: #f1f1f1;
-    width: 100%;
     letter-spacing: 1px;
     justify-content: space-around;
 }
+
