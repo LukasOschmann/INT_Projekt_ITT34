@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <!-- Metadaten der Webseite.-->
+        <!-- Metadaten der Webseite-->
 
         <!-- Titel, der im Tab angezeigt wird -->
         <title> Fragehomepage Mysql</title>
@@ -14,6 +14,8 @@
         <meta charset="UTF-8">
         <!-- Link zum zentralen CSS -->
         <!-- <link rel="stylesheet" href="css/stylesheet.css"> -->
+        <!-- Verlinkung zur JavaScript Datei -->
+        <script src="js/mysql.js"></script>
     </head>
     <body>
         <h1>Fragen zu Mysql</h1>
@@ -26,9 +28,9 @@
 
         <h2>Hier kommen die Fragen:</h2>
 
-        <div class="mysql-spielfeld">
+        <div id="mysql-spielfeld">
             
-            <p>Was ist deine Lieblingssprache im Web?</p>
+            <!-- <p>Was ist deine Lieblingssprache im Web?</p>
             <form>
                 <input type="radio" id="htmlöl" name="fav_language" value="HTML">
                 <label for="htmlöl">HTML</label><br>
@@ -39,7 +41,10 @@
 
                 <input type="submit" value="Ok" />
                 <input type="button" value="Hilfe!" />
-            </form>
+            </form> -->
+
+            <button onclick="submitQuiz()">Submit Quiz</button>
+            <p id="result"></p>
 
         </div>
     
