@@ -47,6 +47,10 @@
             <p id="result"></p>
 
         </div>
+
+        <script>
+            createQuiz();
+        </script>
     
     </body>
 </html>
