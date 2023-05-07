@@ -29,6 +29,7 @@ switch (document.head.querySelector('meta[name="inhalt"]').content) {
         break;
 }
 
+// Weiﬂt das Objekt fragenDB aus der fragenDB_*.js Datei der hier im Dokument bekannten fragenDB zu 
 const fragenDB = importiert.default;
 
 // Elemente ausw‰hlen
