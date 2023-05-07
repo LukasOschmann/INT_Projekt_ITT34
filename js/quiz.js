@@ -1,67 +1,39 @@
 // Zentrale JS Datei
 
-// Fragen-Pool
-const fragenDB = [
-    {
-        frage: "Was ist MySQL?",
-        antworten: ["Ein relationales Datenbankmanagementsystem", "Ein nicht relationales Datenbankmanagementsystem", "Eine Programmiersprache", "Ein Betriebssystem"],
-        korrekteAntwort: "Ein relationales Datenbankmanagementsystem"
-    },
-    {
-        frage: "Wie erstellt man eine neue Datenbank in MySQL?",
-        antworten: ["CREATE DATABASE database_name", "NEW DATABASE database_name", "ADD DATABASE database_name", "MAKE DATABASE database_name"],
-        korrekteAntwort: "CREATE DATABASE database_name"
-    },
-    {
-        frage: "Wie löscht man eine Datenbank in MySQL?",
-        antworten: ["DELETE DATABASE database_name", "REMOVE DATABASE database_name", "ERASE DATABASE database_name", "DROP DATABASE database_name"],
-        korrekteAntwort: "DROP DATABASE database_name"
-    },
-    {
-        frage: "Wie erstellt man eine neue Tabelle in MySQL?",
-        antworten: ["CREATE TABLE table_name", "NEW TABLE table_name", "ADD TABLE table_name", "MAKE TABLE table_name"],
-        korrekteAntwort: "CREATE TABLE table_name"
-    },
-    {
-        frage: "Wie fügt man Daten in eine Tabelle in MySQL ein?",
-        antworten: ["INSERT INTO table_name", "ADD INTO table_name", "UPDATE INTO table_name", "CREATE INTO table_name"],
-        korrekteAntwort: "INSERT INTO table_name"
-    },
-    {
-        frage: "Wie kann man Daten in einer Tabelle in MySQL aktualisieren?",
-        antworten: ["UPDATE table_name", "MODIFY table_name", "CHANGE table_name", "ALTER table_name"],
-        korrekteAntwort: "UPDATE table_name"
-    },
-    {
-        frage: "Wie kann man Daten aus einer Tabelle in MySQL abfragen?",
-        antworten: ["GET * FROM table_name", "SELECT * FROM table_name", "VIEW * FROM table_name", "DISPLAY * FROM table_name"],
-        korrekteAntwort: "SELECT * FROM table_name"
-    },
-    {
-        frage: "Wie kann man Daten aus einer Tabelle in MySQL sortieren?",
-        antworten: ["ORDER BY column_name", "SORT BY column_name", "ARRANGE BY column_name", "GROUP BY column_name"],
-        korrekteAntwort: "ORDER BY column_name"
-    },
-    {
-        frage: "Wie kann man Daten aus mehreren Tabellen in MySQL verknüpfen?",
-        antworten: ["CONNECT", "MERGE", "JOIN", "UNION"],
-        korrekteAntwort: "JOIN"
-    },
-    {
-        frage: "Wie kann man in MySQL eine Abfrage so schreiben, dass sie nur bestimmte Zeilen zurückgibt?",
-        antworten: ["WHERE", "WHEN", "IF", "CASE"],
-        korrekteAntwort: "WHERE"
-    }
-];
-
 // Variablen
 let aktuelleFrage = 0;
 let korrekteAntworten = 0;
+let importiert;
+
+// Importiere den Fragenpool auf Basis der aufgerufenen Subseite (Entscheidung passiert im head) 
+// Somit sparen wir uns die Verarbeitung von zu vielen Informationen
+switch (document.head.querySelector('meta[name="inhalt"]').content) {
+    case "mysql":
+        // Importiert die Fragen von "fragen_mysql.js" in die Variable "importiert"
+        importiert = await import('./fragenDB_mysql.js');
+        break;
+    case "css":
+        // Importiert die Fragen von "fragen_css.js" in die Variable "importiert"
+        importiert = await import('./fragenDB_css.js');
+        break;
+    case "html":
+        // Importiert die Fragen von "fragen_html.js" in die Variable "importiert"
+        importiert = await import('./fragenDB_html.js');
+        break;
+    case "javascript":
+        // Importiert die Fragen von "fragen_js.js" in die Variable "importiert"
+        importiert = await import('./fragenDB_js.js');
+    default:
+        // Fehlermeldung auf Console, falls kein passender Eintrag im <head>
+        console.log("Es wurde kein passender Eintrag im <head> der html Seite gefunden.");
+        break;
+}
+
+const fragenDB = importiert.default;
 
 // Elemente auswählen
 const frageElement = document.getElementById("frage");
 const antwortenElement = document.getElementById("antworten");
-const ueberspringenButton = document.getElementById("ueberspringen");
 const pruefenButton = document.getElementById("pruefen");
 const anzeigenButton = document.getElementById("anzeigen");
 
