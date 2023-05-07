@@ -1,77 +1,41 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <title> Frageseite für CSS </title>
+    <title>Frageseite CSS</title>
+
     <meta name="author" content="Benedikt Meissner, Lukas Oschmann, Tony Beyermann">
     <meta name="keywords" content="HTML, ...">
+
+    <!-- Auf Basis dieses META Tags wird ausgewählt welche Fragen auf der Seite angezeigt werden -->
+    <meta name="inhalt" content="css" />
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="css/stylesheet.css" />
 </head>
-
 <body>
     <p class="background"></p>
 
     <!-- Top Nav-->
-
     <div class="nav-bar nav-left">
         <a class="nav-bar-item nav-button" href="index.html" title="Home - Index.html">Home </a>
         <a class="nav-bar-item nav-button" href="fragen-html.html" title="HTML">HTML</a>
         <a class="nav-bar-item nav-button" href="fragen-css.html" title="CSS">CSS</a>
-        <a class="nav-bar-item nav-button" href="" title="JavaScript">JAVASCRIPT</a>
+        <a class="nav-bar-item nav-button" href="fragen-js.html" title="JavaScript">JAVASCRIPT</a>
         <a class="nav-bar-item nav-button" href="fragen-mysql.html" title="SQL">SQL</a>
     </div>
 
-    <!-- Grundinformationen -->
-    <!-- Übungsfragen -->
-    <h3>Übungen für CSS</h3>
-    <h4> test</h4>
+    <h1>Multiple-Choice-Fragen zum Thema CSS</h1>
+    <p>Auf dieser Seite müssen Sie Ihr wissen über CSS unter beweis stellen. Viel Spaß beim Rätseln!</p>
 
-    <div id="quizmain">
-        <div id="quizcontainer">
+    <!-- Container für Fragen und Antworten, welche über JS erzeugt werden-->
+    <div id="frage"></div>
+    <div id="antworten"></div>
 
-            <script>
-                function clickRadio(elmnt) {
-                    var n, i, x;
-                    n = elmnt.id;
-                    for (i = 1; i < 5; i++) {
-                        x = document.getElementById("label" + i);
-                        if (x) { x.className = x.className.replace(" checkedlabel", ""); }
-                    }
-                    document.getElementById("label" + n).className += " checkedlabel";
-                }
-                function clickNextButton(n) {
-                    submitAnswer(n + 1);
-                }
-                function submitAnswer(n) {
-                    var f = document.getElementById("quizform");
-                    f["nextnumber"].value = n;
-                    f.submit();
-                }
-                
+    <!-- Buttons für die Spielsteuerung -->
+    <button id="pruefen">Antwort überprüfen</button>
+    <button id="anzeigen">Antwort anzeigen</button>
 
-            </script>
-
-            <h3>Question 1 of 25:</h3>
-            <p id="qtext">What does CSS stand for?</p>
-            <form role="form" id="css-quizform" name="quizform" action='quiztest.asp?qtest=CSS' method='post'>
-                <input type="hidden" name="starttime" value="3/27/2023 8:39:20 PM">
-                <input type="hidden" name="answers" value="0000000000000000000000000">
-                <input type="hidden" name="nextnumber">
-                <input type="hidden" name="prevnumber" value="1">
-                <div style="position:relative;width:100%;">
-                    <div id="altcontainer" class="notranslate">
-                        <label class='css-radiocontainer' id='label3'> Cascading Style Sheets<input type='radio' name='quiz' id='3' onclick='clickRadio(this)' value='3' /><span class='checkmark'></span></label><label class='radiocontainer' id='label2'> Creative Style Sheets<input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' /><span class='checkmark'></span></label><label class='radiocontainer' id='label1'> Colorful Style Sheets<input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' /><span class='checkmark'></span></label><label class='radiocontainer' id='label4'> Computer Style Sheets<input type='radio' name='quiz' id='4' onclick='clickRadio(this)' value='4' /><span class='checkmark'></span></label>
-                    </div>
-                </div>
-                <div id="css-answerbuttoncontainer">
-                    <button class="answerbutton w3-btn ws-green" type="submit" onclick="clickNextButton(1)">Next &#10095;</button>
-                    <input type="text" readonly id="timespent" value="0:00">
-                </div>
-            </form>
-
-        </div>
-    </div>
-
+    <!-- Einbindung des JS Scripts -->
+    <script src="js/quiz.js" type="module"></script>
 </body>
 </html>
