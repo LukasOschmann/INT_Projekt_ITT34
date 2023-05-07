@@ -29,10 +29,10 @@ switch (document.head.querySelector('meta[name="inhalt"]').content) {
         break;
 }
 
-// Weißt das Objekt fragenDB aus der fragenDB_*.js Datei der hier im Dokument bekannten fragenDB zu 
+// WeiÃŸt das Objekt fragenDB aus der fragenDB_*.js Datei der hier im Dokument bekannten fragenDB zu 
 const fragenDB = importiert.default;
 
-// Elemente auswählen
+// Elemente auswÃ¤hlen
 const frageElement = document.getElementById("frage");
 const antwortenElement = document.getElementById("antworten");
 const pruefenButton = document.getElementById("pruefen");
@@ -54,39 +54,39 @@ function zeigeFrage() {
 
 // Soll die Antwort zur Frage anzeigen lassen
 function zeigeAntwort() {
-    // Wählt aus dem HTML Dokument das Element der richtigen Lösung der Frage aus und speichert diese in einer Variable
+    // WÃ¤hlt aus dem HTML Dokument das Element der richtigen LÃ¶sung der Frage aus und speichert diese in einer Variable
     const loesungFrage = document.querySelector(`input[value="${fragenDB[aktuelleFrage].korrekteAntwort}"]`);
 
-    // Setzt die Lösung als checked im Dokument
+    // Setzt die LÃ¶sung als checked im Dokument
     loesungFrage.checked = true;
 }
 
 function ueberpruefeAntwort() {
-    // Ausgewählte Antwort abrufen
+    // AusgewÃ¤hlte Antwort abrufen
     const ausgewaehlteAntwort = document.querySelector('input[name="antwort"]:checked').value;
 
-    // Antwort überprüfen
+    // Antwort Ã¼berprÃ¼fen
     if (ausgewaehlteAntwort === fragenDB[aktuelleFrage].korrekteAntwort) {
-        // Erhöht den Zähler für korrekt beantwortete Fragen
+        // ErhÃ¶ht den ZÃ¤hler fÃ¼r korrekt beantwortete Fragen
         korrekteAntworten++;
-        // Erhöht den Zähler für den Aktuelle Frage
+        // ErhÃ¶ht den ZÃ¤hler fÃ¼r den Aktuelle Frage
         aktuelleFrage++;
         alert("Richtig!");
 
         if (korrekteAntworten === fragenDB.length) {
-            // Wird ausgeführt, wenn alle Fragen korrekt beantwortet wurden.
-            frageElement.innerText = "Vielen Dank fürs Spielen";
+            // Wird ausgefÃ¼hrt, wenn alle Fragen korrekt beantwortet wurden.
+            frageElement.innerText = "Vielen Dank fÃ¼rs Spielen";
             antwortenElement.innerText = `Sie haben ${korrekteAntworten} von ${fragenDB.length} Fragen richtig beantwortet.`;
 
             // Deaktiviert die Spielbuttons
             pruefenButton.disabled = true;
             anzeigenButton.disabled = true;
 
-            // Beendet die Ausführung der Funktion
+            // Beendet die AusfÃ¼hrung der Funktion
             return;
         }
 
-        //Lädt die nächste Frage
+        //LÃ¤dt die nÃ¤chste Frage
         zeigeFrage();
     }
     else {
@@ -95,7 +95,7 @@ function ueberpruefeAntwort() {
 
 }
 
-// Ereignis-Listener hinzufügen, damit bei Klick auf die Buttons die Entsprechenden Funktionen aufgerufen werden
+// Ereignis-Listener hinzufÃ¼gen, damit bei Klick auf die Buttons die Entsprechenden Funktionen aufgerufen werden
 pruefenButton.addEventListener("click", ueberpruefeAntwort);
 anzeigenButton.addEventListener("click", zeigeAntwort);
 

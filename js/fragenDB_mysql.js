@@ -1,17 +1,17 @@
 // Fragenkatalog zum Thema MySQL
 const fragenDB = [
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze in einer Tabelle zu aktualisieren?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze in einer Tabelle zu aktualisieren?",
         antworten: ["INSERT", "DELETE", "UPDATE"],
         korrekteAntwort: "UPDATE"
     },
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze aus einer Tabelle auszuw‰hlen?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze aus einer Tabelle auszuw√§hlen?",
         antworten: ["SELECT", "WHERE", "FROM"],
         korrekteAntwort: "SELECT"
     },
     {
-        frage: "Welches SQL-Schl¸sselwort wird verwendet, um eine neue Tabelle zu erstellen?",
+        frage: "Welches SQL-Schl√ºsselwort wird verwendet, um eine neue Tabelle zu erstellen?",
         antworten: ["ADD", "CREATE", "UPDATE"],
         korrekteAntwort: "CREATE"
     },
@@ -21,22 +21,22 @@ const fragenDB = [
         korrekteAntwort: "Structured Query Language"
     },
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze in einer Tabelle zu sortieren?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze in einer Tabelle zu sortieren?",
         antworten: ["GROUP BY", "SORT BY", "ORDER BY"],
         korrekteAntwort: "ORDER BY"
     },
     {
-        frage: "Welches SQL-Schl¸sselwort wird verwendet, um mehrere Bedingungen in einer Abfrage zu kombinieren?",
+        frage: "Welches SQL-Schl√ºsselwort wird verwendet, um mehrere Bedingungen in einer Abfrage zu kombinieren?",
         antworten: ["AND", "OR", "NOT"],
         korrekteAntwort: "AND"
     },
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze aus einer Tabelle zu gruppieren?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze aus einer Tabelle zu gruppieren?",
         antworten: ["GROUP BY", "ORDER BY", "WHERE"],
         korrekteAntwort: "GROUP BY"
     },
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze aus einer Tabelle einzuf¸gen?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze aus einer Tabelle einzuf√ºgen?",
         antworten: ["ADD", "UPDATE", "INSERT"],
         korrekteAntwort: "INSERT"
     },
@@ -46,7 +46,7 @@ const fragenDB = [
         korrekteAntwort: "AVG()"
     },
     {
-        frage: "Welche SQL-Klausel wird verwendet, um Datens‰tze aus einer Tabelle zu filtern?",
+        frage: "Welche SQL-Klausel wird verwendet, um Datens√§tze aus einer Tabelle zu filtern?",
         antworten: ["FROM", "SELECT", "WHERE"],
         korrekteAntwort: "WHERE"
     }

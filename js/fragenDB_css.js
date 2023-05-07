@@ -2,16 +2,16 @@
 const fragenDB = [
     {
         frage: "Was ist der Unterschied zwischen einer ID und einer Klasse in CSS?",
-        antworten: ["Eine ID kann nur einmal pro Seite verwendet werden, w‰hrend eine Klasse mehrfach verwendet werden kann.", "Eine Klasse kann nur einmal pro Seite verwendet werden, w‰hrend eine ID mehrfach verwendet werden kann.", "Es gibt keinen Unterschied zwischen einer ID und einer Klasse."],
-        korrekteAntwort: "Eine ID kann nur einmal pro Seite verwendet werden, w‰hrend eine Klasse mehrfach verwendet werden kann."
+        antworten: ["Eine ID kann nur einmal pro Seite verwendet werden, w√§hrend eine Klasse mehrfach verwendet werden kann.", "Eine Klasse kann nur einmal pro Seite verwendet werden, w√§hrend eine ID mehrfach verwendet werden kann.", "Es gibt keinen Unterschied zwischen einer ID und einer Klasse."],
+        korrekteAntwort: "Eine ID kann nur einmal pro Seite verwendet werden, w√§hrend eine Klasse mehrfach verwendet werden kann."
     },
     {
-        frage: "Wie f¸gt man in CSS eine Hintergrundfarbe zu einem Element hinzu?",
+        frage: "Wie f√ºgt man in CSS eine Hintergrundfarbe zu einem Element hinzu?",
         antworten: ["background-image", "text-background", "background-color"],
         korrekteAntwort: "background-color"
     },
     {
-        frage: "Welches CSS-Attribut wird verwendet, um die Ausrichtung von Elementen in einem Container zu ‰ndern?",
+        frage: "Welches CSS-Attribut wird verwendet, um die Ausrichtung von Elementen in einem Container zu √§ndern?",
         antworten: ["float", "justify-content", "display-flex"],
         korrekteAntwort: "justify-content"
     },
@@ -26,12 +26,12 @@ const fragenDB = [
         korrekteAntwort: "Eine Stylesheet-Sprache"
     },
     {
-        frage: "Welches CSS-Attribut wird verwendet, um die Schriftgrˆﬂe zu ‰ndern?",
+        frage: "Welches CSS-Attribut wird verwendet, um die Schriftgr√∂√üe zu √§ndern?",
         antworten: ["font-weight", "font-style", "font-size"],
         korrekteAntwort: "font-size"
     },
     {
-        frage: "Welches CSS-Attribut wird verwendet, um den Abstand zwischen Elementen zu ‰ndern?",
+        frage: "Welches CSS-Attribut wird verwendet, um den Abstand zwischen Elementen zu √§ndern?",
         antworten: ["padding", "border", "margin", "display"],
         korrekteAntwort: "margin"
     },
