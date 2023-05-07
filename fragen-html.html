@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frageseite HTML</title>
+
+    <meta name="author" content="Benedikt Meissner, Lukas Oschmann, Tony Beyermann">
+    <meta name="keywords" content="HTML, ...">
+    <!-- Auf Basis dieses META Tags wird ausgewählt welche Fragen auf der Seite angezeigt werden -->
+    <meta name="inhalt" content="html" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+<body>
+    <p class="background"></p>
+
+    <!-- Top Nav-->
+    <div class="nav-bar nav-left">
+        <a class="nav-bar-item nav-button" href="index.html" title="Home - Index.html">Home </a>
+        <a class="nav-bar-item nav-button" href="fragen-html.html" title="HTML">HTML</a>
+        <a class="nav-bar-item nav-button" href="fragen-css.html" title="CSS">CSS</a>
+        <a class="nav-bar-item nav-button" href="fragen-js.html" title="JavaScript">JAVASCRIPT</a>
+        <a class="nav-bar-item nav-button" href="fragen-mysql.html" title="SQL">SQL</a>
+    </div>
+
+    <h1>Multiple-Choice-Fragen zum Thema HTML</h1>
+    <p>Auf dieser Seite müssen Sie Ihr wissen über HTML unter beweis stellen. Viel Spaß beim Rätseln!</p>
+
+    <!-- Container für Fragen und Antworten, welche über JS erzeugt werden-->
+    <div id="frage"></div>
+    <div id="antworten"></div>
+
+    <!-- Buttons für die Spielsteuerung -->
+    <button id="pruefen">Antwort überprüfen</button>
+    <button id="anzeigen">Antwort anzeigen</button>
+
+    <!-- Einbindung des JS Scripts -->
+    <script src="js/quiz.js" type="module"></script>
+</body>
+</html>
