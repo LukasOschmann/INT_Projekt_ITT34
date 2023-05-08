@@ -26,7 +26,6 @@ switch (document.head.querySelector('meta[name="inhalt"]').content) {
     default:
         // Fehlermeldung auf Console, falls kein passender Eintrag im <head>
         console.log("Es wurde kein passender Eintrag im <head> der html Seite gefunden.");
-        break;
 }
 
 // Weißt das Objekt fragenDB aus der fragenDB_*.js Datei der hier im Dokument bekannten fragenDB zu 
@@ -71,11 +70,11 @@ function ueberpruefeAntwort() {
         korrekteAntworten++;
         // Erhöht den Zähler für den Aktuelle Frage
         aktuelleFrage++;
-        alert("Richtig!");
+        alert("Das ist die richtige Antwort. Gut gemacht! 👍");
 
         if (korrekteAntworten === fragenDB.length) {
             // Wird ausgeführt, wenn alle Fragen korrekt beantwortet wurden.
-            frageElement.innerText = "Vielen Dank fürs Spielen";
+            frageElement.innerText = "Vielen Dank fürs Spielen 😊";
             antwortenElement.innerText = `Sie haben ${korrekteAntworten} von ${fragenDB.length} Fragen richtig beantwortet.`;
 
             // Deaktiviert die Spielbuttons
@@ -90,7 +89,7 @@ function ueberpruefeAntwort() {
         zeigeFrage();
     }
     else {
-        alert("Falsch! Bitte versuchen Sie es erneut.");
+        alert("Leider falsch! Bitte versuchen Sie es erneut. 🤔");
     }
 
 }
