@@ -48,28 +48,58 @@
                     f["nextnumber"].value = n;
                     f.submit();
                 }
-                
+
 
             </script>
 
-            <h3>Question 1 of 25:</h3>
-            <p id="qtext">What does CSS stand for?</p>
+            <h3>Question 1 of 10:</h3>
+            <p id="qtext">Fuer was steht CSS?</p>
             <form role="form" id="css-quizform" name="quizform" action='quiztest.asp?qtest=CSS' method='post'>
-                <input type="hidden" name="starttime" value="3/27/2023 8:39:20 PM">
+                <input type="hidden" name="answers" value="0000000000000000000000000">
+                <input type="hidden" name="nextnumber">
+                <input type="hidden" name="prevnumber" value="1">
+                <div>
+                    <div id="altcontainer"">
+                        <label class='css-radiocontainer' id='label3'><input type='radio' name='quiz' id='3' onclick='clickRadio(this)' value='3' /> Cascading Style Sheets<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label2'><input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' /> Creative Style Sheets<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label1'><input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' /> Colorful Style Sheets<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label4'><input type='radio' name='quiz' id='4' onclick='clickRadio(this)' value='4' /> Computer Style Sheets<span class='checkmark'></span></label><br />
+                    </div>
+                </div>
+            </form>
+
+            <!--Frage 2-->
+            <h3>Question 2 of 10:</h3>
+            <p id="qtext">Was ist der Unterschied zwischen CSS und HTML?</p>
+            <form role="form" id="css-quizform" name="quizform" action='quiztest.asp?qtest=CSS' method='post'>
+                <input type="hidden" name="answers" value="0000000000000000000000000">
+                <input type="hidden" name="prevnumber" value="1">
+                <div style="position:relative;width:100%;">
+                    <div id="altcontainer" class="notranslate">
+                        <label class='css-radiocontainer' id='label3'><input type='radio' name='quiz' id='3' onclick='clickRadio(this)' value='3' /> CSS designed die Inhalte, HTML definiert den Inhalt der Website <span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label2'><input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' /> CSS und HTML sind zwei unabhaengige Webanwendungssprachen<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label1'><input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' /> CSS definiert den Inhalt der Website, HTML designed die Inhalte<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label4'><input type='radio' name='quiz' id='4' onclick='clickRadio(this)' value='4' /> CSS ist die Sprache für Linuxsysteme, HTML ist die Sprache für Windowssysteme<span class='checkmark'></span></label><br />
+                    </div>
+                </div>
+            </form>
+
+            <!--Frage 3-->
+            <h3>Question 2 of 10:</h3>
+            <p id="qtext">Gibt es eine Möglichkeit ?</p>
+            <form role="form" id="css-quizform" name="quizform" action='quiztest.asp?qtest=CSS' method='post'>
                 <input type="hidden" name="answers" value="0000000000000000000000000">
                 <input type="hidden" name="nextnumber">
                 <input type="hidden" name="prevnumber" value="1">
                 <div style="position:relative;width:100%;">
                     <div id="altcontainer" class="notranslate">
-                        <label class='css-radiocontainer' id='label3'> Cascading Style Sheets<input type='radio' name='quiz' id='3' onclick='clickRadio(this)' value='3' /><span class='checkmark'></span></label><label class='radiocontainer' id='label2'> Creative Style Sheets<input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' /><span class='checkmark'></span></label><label class='radiocontainer' id='label1'> Colorful Style Sheets<input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' /><span class='checkmark'></span></label><label class='radiocontainer' id='label4'> Computer Style Sheets<input type='radio' name='quiz' id='4' onclick='clickRadio(this)' value='4' /><span class='checkmark'></span></label>
+                        <label class='css-radiocontainer' id='label3'><input type='radio' name='quiz' id='3' onclick='clickRadio(this)' value='3' /> CSS designed die Inhalte, HTML definiert den Inhalt der Website <span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label2'><input type='radio' name='quiz' id='2' onclick='clickRadio(this)' value='2' /> CSS und HTML sind zwei unabhaengige Webanwendungssprachen<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label1'><input type='radio' name='quiz' id='1' onclick='clickRadio(this)' value='1' /> CSS definiert den Inhalt der Website, HTML designed die Inhalte<span class='checkmark'></span></label><br />
+                        <label class='css-radiocontainer' id='label4'><input type='radio' name='quiz' id='4' onclick='clickRadio(this)' value='4' /> CSS ist die Sprache für Linuxsysteme, HTML ist die Sprache für Windowssysteme<span class='checkmark'></span></label><br />
                     </div>
                 </div>
-                <div id="css-answerbuttoncontainer">
-                    <button class="answerbutton w3-btn ws-green" type="submit" onclick="clickNextButton(1)">Next &#10095;</button>
-                    <input type="text" readonly id="timespent" value="0:00">
-                </div>
             </form>
-
         </div>
     </div>
 
